@@ -1,14 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+import classes.Robot
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+fun main() {
+    // Creación de instancia instancia de un objeto utilizando la clase Robot.
+    val robot1 = Robot()
+
+    // * Estructura de movimientos en un array de arrays de enteros.
+    val movimientosArray: Array<Array<Int>> = arrayOf(
+        arrayOf(1, -5, 0, -9),
+        arrayOf(3, 3, 5, 6, 1, 0, 0, -7),
+        arrayOf(2, 1, 0, -1, 1, 1, -4),
+        arrayOf(),
+        arrayOf(3, 5)
+    )
+
+    // * Iteración sobre cada conjunto de movimientos que actualiza
+    // * y muestra la posición del robot.
+    for (movimientos in movimientosArray) {
+        robot1.mover(movimientos)
+        println(robot1)
     }
 }
